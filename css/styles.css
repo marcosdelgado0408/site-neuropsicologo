@@ -1,0 +1,229 @@
+.hidden {
+    display: none;
+}
+
+
+body {
+    font-family: "Kaisei Decol", serif;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+    background-color: #82AF87;
+}
+
+
+header{
+    background-color: #2C5C3E;
+
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 10px 20px; /* Adiciona um pouco de preenchimento ao redor do cabeçalho */
+}
+
+
+.logo-header-image{
+    width: 10%; /* Reduz a largura da imagem para 50% do tamanho original */
+    height: auto; /* Mantém a proporção original da imagem */
+}
+
+header nav {
+    margin-right: 20px;
+}
+
+/* parte de cada item do header */
+header nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    position: relative;
+    padding-bottom: 80px; /* para a imagem de background ultrapassar a div de dentro */
+}
+
+main::before {
+    content: ''; /* Adiciona conteúdo ao pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/home_background.webp'); /* Imagem de plano de fundo */
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    opacity: 0.25; /* Define a opacidade da imagem de plano de fundo */
+    z-index: -1; /* Coloca a camada do plano de fundo atrás do conteúdo */
+}
+
+.home-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.intro {
+    width: 50%;
+    margin-top: 50px;
+
+}
+
+.intro h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    color: #000;
+    
+}
+
+.intro h2{
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 50px;
+    color: #000;
+
+}
+
+
+.intro p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    color: #000;
+    
+}
+
+.buttons button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+.btn-contato{
+    padding: 12px 25px; /* Tamanho do padding pode ser ajustado conforme necessário */
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #2C5C3E; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado de links */
+    display: inline-block; /* Garante que a tag a se comporte como um botão */
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+
+.btn-contato:hover{
+    background-color: #82AF87; /* Cor de fundo ao passar o mouse */
+}
+
+.buttons button:hover {
+    background-color: #82AF87;
+}
+
+.profile-picture {
+    /* Adicione uma imagem de perfil usando CSS, ou insira diretamente no HTML */
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    background-color: #ccc;
+    border-radius: 50%;
+    background-image: url('../images/foto_perfil.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.contato{
+    margin-top: 1000px;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 8% 8%;
+  
+}
+
+.logo-contato img{
+    display: block; /* Isso faz a imagem ocupar a linha inteira, impedindo o texto de flutuar ao lado dela */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente se desejado */
+}
+
+.logo-contato h1{
+    text-align: center; /* Alinha o texto ao centro abaixo da imagem */
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+}
+
+#logoSimples{
+    height: 200px;
+    width: 200px;
+}
+
+
+
+.form-container {
+
+    margin-left: 20%;
+    box-sizing: border-box;
+    padding: 24px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #2C5C3E;
+    border-radius: 16px;
+    width: 100%; /* Ajuste conforme necessário */
+    align-items: flex-start;
+}
+
+.input-field, .textarea-field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #2C5C3E;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input-field:focus, .textarea-field:focus {
+    border-bottom-color: #00c4a7; /* Cor de acento, ajuste conforme necessário */
+}
+
+.textarea-field {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    resize: none;
+}
+
+.submit-button {
+    padding: 8px 16px;
+    font-size: large;
+    cursor: pointer;
+    background-color: #2C5C3E; /* Cor de acento */
+    border: none;
+    color: white;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #82AF87; /* Escurecer um pouco no hover */
+}

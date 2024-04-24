@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Araújo - Neuropsicólogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/effects.js"></script>
+
+
+
+    <header>
+        
+        <div class="logo-header">
+            <img class="logo-header-image" src="images/logo.png" alt="logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#main">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#">Redes Sociais</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+
+    <main id="main" class="hidden">  
+
+        <div class="home-container">
+            <div class="intro">
+            
+                <h1>Matheus Araújo</h1>
+                <h2>Neuropsicólogo e avaliação Psicológica</h2>
+    
+                <p id="texto_inicial">Olá, sou Matheus Araújo, psicólogo especializado em neuropsicologia.
+                Ofereço meus serviços para lhe ajudar a compreender e trabalhar questões de
+                capacidades, comportamento, personalidades ou desenvolvimento prezando
+                pela melhoria da sua qualidade de vida.</p>
+                
+                <div class="buttons">
+                    <button onclick=showMoreLess() id="mostrarMais" class="btn-mais"">Mais</button>
+                    <a href="#contato" class="btn-contato">Contato</a>
+                </div>
+        
+            </div>
+            <div class="profile-picture"></div> 
+        
+        </div>
+
+    </main>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>  <!-- temporário  -->
+
+    <div class="servicos"></div>
+
+    <dir id="contato" class="contato">
+        
+        <div class="logo-contato">
+            <img id="logoSimples" src="images/logo_simples.png" alt="logo-simples">
+            <h1>Me contacte</h1>
+        </div>
+
+        <div class="form-container">
+            <input type="text" placeholder="Nome" class="input-field">
+            <input type="text" placeholder="Email" class="input-field">
+            <textarea placeholder="Mensagem" class="textarea-field"></textarea>
+            <button class="submit-button">Enviar</button>
+        </div>
+        
+
+
+    </dir>
+
+    <dir class="redes-sociais"></dir>
+   
+</body>
+</html>
