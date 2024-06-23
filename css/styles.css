@@ -7,14 +7,14 @@ body {
     background:rgb(130,175,135);
     background: linear-gradient(45deg, rgba(130,175,135,1) 0%, rgba(74,121,88,1) 30%, rgba(44,92,62,1) 100%);
     box-sizing: border-box;
+    overflow-x: hidden; /* Adicionado para evitar o espaço extra à direita */
 }
-
 
 .hidden {
     display: none;
 }
 
-.conteiner-contato, .sobre-mim-container {
+.conteiner-contato, .sobre-mim-container, .container-localizacao {
     max-width: 100%;
     overflow-x: hidden; /* Adicionado */
 }

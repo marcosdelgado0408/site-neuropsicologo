@@ -3,6 +3,11 @@
         overflow-x: hidden; /* Adicionado para evitar o espaço extra à direita */
     }
 
+    .conteiner-contato, .sobre-mim-container, .container-localizacao {
+        max-width: 100%;
+        overflow-x: hidden; /* Adicionado */
+    }
+
     header {
         align-items: center;
     }
@@ -56,10 +61,23 @@
     }
 
 
-    #titulo-servicos, #titulo-contato, #titulo-sobre-mim, #titulo-localizacao{
+
+    #titulo-servicos, #titulo-contato, #titulo-sobre-mim,#titulo-localizacao {
         margin-top: 20%;
-        margin-bottom: 10%
+        margin-bottom: 10%;
+
     }
+
+    .contato{
+        margin-bottom: 15%;
+    }
+
+
+    .sobre-mim {
+        margin-top: 0;
+        margin-bottom: 0; /* Reduzindo a margem inferior */
+    }
+
 
     .home-container {
         flex-direction: column;
@@ -112,21 +130,38 @@
         text-align: center;
     }
 
-    .icone-atendimento,
-    .icone-avaliacao {
-        width: 100px;
-        height: 100px;
+    .icone-atendimento{
+        width: 150px;
+        height: 150px;
     }
+
+    .icone-avaliacao {
+        width: 80px;
+        height: 80px;
+    }
+
+
 
     .conteiner-contato {
         flex-direction: column;
         align-items: center;
     }
 
+    .instagram{
+        margin-left: 7%;
+    }
+
     .slider {
         margin-left: 5%;
     }
-
+    
+    .instagram-post {
+        margin-top: 100px;
+        width: 200px;
+        height: 200px;
+        margin-left: 10%;
+    }
+    
     .form {
         margin-top: 15%;
         margin-left: 0;
@@ -139,15 +174,17 @@
     .sobre-mim-container {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .sobre-mim-container img {
-        width: 40%;
+        width: 50%;
         height: auto;
     }
 
     .sobre-mim-container ul {
-        margin-left: 0;
+        margin-left: 3%;
+        padding-left: 0;
         text-align: center;
     }
 
@@ -163,25 +200,21 @@
         align-items: center;
     }
 
-    .mapa {
+   .mapa {
         margin-top: 10%;
-
-        margin-left: 0;
-        margin-right: 0;
-        
-    
-
-        width: 52%;
-        height: 100%;
+        margin-left: 25%;
+        padding: 0; /* Remove padding extra */
+        width: 100%; /* Garante que o contêiner não ultrapasse a largura da tela */
     }
 
     .mapa iframe {
-    
-        width: 100%;
-        height: 300px;
+        width: 70%;
+        height: 200px; /* Ajuste a altura conforme necessário */
+        padding: 0; /* Remove padding extra */
+        margin: 0; /* Remove margem extra */
     }
 
     .info-loc h1 {
-        font-size: 24px;
+        font-size: 18px;
     }
 }

@@ -1,4 +1,4 @@
-const token = 'IGQWRNRkpONzhxbUtqbXF2QjVDanh3Wl84cTBtYzRFdE9ORTB4c1pOZADh0a1Y0NWJEWVRnTVFHUkxZAdnRtYV9XVmJKcGZARaWd5ZAGVBSWJFcGFlSXdMTENVcXJLM3U3RHdpN1JvRnZAKQnljOFdKSVNDUjkzcF9qZA0UZD'; // Substitua pelo seu token
+const token = ''; // Substitua pelo seu token
 
 async function fetchInstagramFeed() {
     const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=${token}`;
@@ -80,7 +80,7 @@ function initializeCarousel() {
         updatePositions();
     }
 
-    setInterval(moveToNext, 4000);
+    setInterval(moveToNext, 2000);
 
     updatePositions();
 }
