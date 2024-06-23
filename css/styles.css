@@ -1,40 +1,49 @@
+/* Estilos gerais */
+body {
+    font-family: "Kaisei Decol", serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background:rgb(130,175,135);
+    background: linear-gradient(45deg, rgba(130,175,135,1) 0%, rgba(74,121,88,1) 30%, rgba(44,92,62,1) 100%);
+    box-sizing: border-box;
+}
+
+
 .hidden {
     display: none;
 }
 
-
-body {
-    font-family: "Kaisei Decol", serif;
-    font-weight: 400;
-
-    margin: 0;
-    padding: 0;
-    background-color: #82AF87;
+.conteiner-contato, .sobre-mim-container {
+    max-width: 100%;
+    overflow-x: hidden; /* Adicionado */
 }
 
-
-header{
+header {
     background-color: #2C5C3E;
-
-    display: flex; /* Usa flexbox */
-    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
-    align-items: center; /* Centraliza verticalmente os itens */
-    padding: 10px 20px; /* Adiciona um pouco de preenchimento ao redor do cabeçalho */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
 }
 
-
-.logo-header-image{
-    width: 10%; /* Reduz a largura da imagem para 50% do tamanho original */
-    height: auto; /* Mantém a proporção original da imagem */
+.logo-header-image {
+    width: 10%; 
+    height: auto; 
 }
 
 header nav {
     margin-right: 20px;
 }
 
-/* parte de cada item do header */
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 header nav ul li {
-    display: inline;
     margin-left: 25px;
 }
 
@@ -43,6 +52,20 @@ header nav ul li a {
     color: white;
 }
 
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Home Section */
 main {
     position: relative;
     padding-bottom: 80px; /* para a imagem de background ultrapassar a div de dentro */
@@ -58,11 +81,12 @@ main::before {
     background-image: url('../images/home_background.webp'); /* Imagem de plano de fundo */
     background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
+    border-radius: 16px;
     opacity: 0.25; /* Define a opacidade da imagem de plano de fundo */
     z-index: -1; /* Coloca a camada do plano de fundo atrás do conteúdo */
 }
 
-.home-container{
+.home-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -72,31 +96,25 @@ main::before {
 .intro {
     width: 50%;
     margin-top: 50px;
-
 }
 
 .intro h1 {
     font-size: 50px;
     margin-bottom: 0;
-    color: #000;
-    
+    color: #ffffff;
 }
 
-.intro h2{
+.intro h2 {
     margin-top: 0;
     font-size: 22px;
     margin-bottom: 50px;
-    color: #000;
-
+    color: #ffffff;
 }
-
 
 .intro p {
     font-size: 1.2em;
-    color: #333;
     line-height: 1.6;
-    color: #000;
-    
+    color: #dddddd;
 }
 
 .buttons button {
@@ -110,8 +128,8 @@ main::before {
     font-size: 16px;
 }
 
-.btn-contato{
-    padding: 12px 25px; /* Tamanho do padding pode ser ajustado conforme necessário */
+.btn-contato {
+    padding: 9px 25px; /* Tamanho do padding pode ser ajustado conforme necessário */
     margin-right: 10px;
     border: none;
     cursor: pointer;
@@ -125,8 +143,7 @@ main::before {
     text-align: center; /* Centraliza o texto no botão */
 }
 
-
-.btn-contato:hover{
+.btn-contato:hover {
     background-color: #82AF87; /* Cor de fundo ao passar o mouse */
 }
 
@@ -135,59 +152,164 @@ main::before {
 }
 
 .profile-picture {
-    /* Adicione uma imagem de perfil usando CSS, ou insira diretamente no HTML */
     margin-top: 50px;
-    width: 300px;
-    height: 300px;
-    background-color: #ccc;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
-    background-image: url('../images/foto_perfil.jpg');
+    background-image: url('../images/foto_perfil_transparente.png');
     background-size: cover;
     background-position: center;
 }
 
-
-.contato{
-    margin-top: 1000px;
+/* Serviços Section */
+#titulo-servicos {    
+    margin-top: 300px;
+    padding-top: 30px;
+    padding-left: 30px;
+    color: #ffffff;
+    font-size: 30px;
     margin-bottom: 100px;
+}
 
+.container-servico {
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.servico {
+    padding: 30px;
+    flex: 1;
+}
+
+.icone-atendimento {
+    filter: invert(100%);
+    width: 180px;
+    height: 180px;
+}
+
+.icone-avaliacao {
+    filter: invert(100%);
+    margin-top: 7%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8%;
+}
+
+.servico h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.servico p {
+    font-size: 18px;
+    color: #e1e1e1;
+}
+
+.barra-lateral {
+    width: 1px;
+    background-color: #ffffff; /* Cor da barra lateral */
+    margin: 0 50px; /* Espaçamento em torno da barra lateral */
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+/* Contato Section */
+#titulo-contato {
+    margin-top: 300px;
+    padding-top: 30px;
+    padding-left: 30px;
+    position: relative;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 140px;   
+}
+
+.conteiner-contato {
+    display: flex;
+    margin-left: 8%;
+}
+
+.instagram {
+    display: flexbox;
     align-items: center;
-    justify-content: space-around;
-
-    padding: 8% 8%;
-  
+    justify-content: center;
+    margin-right: 100px;
 }
 
-.logo-contato img{
-    display: block; /* Isso faz a imagem ocupar a linha inteira, impedindo o texto de flutuar ao lado dela */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente se desejado */
+.instagram-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo-contato h1{
-    text-align: center; /* Alinha o texto ao centro abaixo da imagem */
-    margin-top: 10px; /* Espaço entre a imagem e o texto */
+.instagram-logo i {
+    color: white;
+    font-size: 30px;
 }
 
-#logoSimples{
+.instagram-logo p {
+    margin-left: 10px;
+    color: white;
+}
+
+.slider {
+    position: relative;
+    width: 340px;
+    height: 350px;
+    /* border: 1px solid #ccc; */
+    perspective: 100px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+}
+
+.instagram-post {
+    margin-top: 100px;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    font-size: 2rem;
+}
+
+.instagram-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#logoSimples {
     height: 200px;
     width: 200px;
 }
 
+.form {
+    margin-left: 15%;
+}
 
+.whatsapp-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.whatsapp-logo i {
+    font-size: 30px;
+    color: white;
+}
+
+.whatsapp-logo p {
+    margin-left: 10px;
+    color: white;
+}
 
 .form-container {
-
-    margin-left: 20%;
-    box-sizing: border-box;
     padding: 24px;
-    padding-bottom: 96px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    border: 1px solid #2C5C3E;
+    border: 1px solid #ffffff;
     border-radius: 16px;
     width: 100%; /* Ajuste conforme necessário */
     align-items: flex-start;
@@ -196,11 +318,15 @@ main::before {
 .input-field, .textarea-field {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #2C5C3E;
+    border-bottom: 1px solid #ffffff;
     padding: 12px 0;
     width: 100%;
     outline: none;
     transition: all 0.3s;
+}
+
+.input-field::placeholder, .textarea-field::placeholder {
+    color: #ffffff;
 }
 
 .input-field:focus, .textarea-field:focus {
@@ -226,4 +352,114 @@ main::before {
 
 .submit-button:hover {
     background-color: #82AF87; /* Escurecer um pouco no hover */
+}
+
+.email {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.email i {
+    margin-left: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.email p {
+    margin-left: 10px;
+    color: white;
+}
+
+/* Sobre Mim Section */
+#titulo-sobre-mim {
+    margin-top: 300px;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.sobre-mim {
+    margin-bottom: 300px;
+}
+
+.sobre-mim-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-mim-container img {
+    width: 340px;
+    height: 500px;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.sobre-mim-container ul {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.sobre-mim-container ul li {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    transition: background-color 0.3s;
+}
+
+.sobre-mim-container ul li:hover {
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+/* Localização Section */
+#titulo-localizacao {
+    margin-top: 300px;
+    padding-top: 30px;
+    font-size: 30px;
+    padding-left: 30px;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.container-localizacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.info-loc h1 {
+    margin-bottom: 30px;
+    color: #eeeeee;
+}
+
+.info-loc-menor {
+    line-height: 1.2; /* Define o espaçamento entre as linhas de texto */
+    color: #eeeeee;
+}
+
+.info-loc-menor a {
+    color: #3089c5; /* Altera a cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Torna o texto em negrito */
+    border-radius: 5px; /* Arredonda os cantos do link */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave ao mudar a cor de fundo */
+}
+
+.info-loc-menor a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.info-loc-menor p {
+    margin: 5px 0; /* Adiciona um pequeno espaço entre os parágrafos */
+}
+
+.mapa {
+    margin-left: 150px;
 }

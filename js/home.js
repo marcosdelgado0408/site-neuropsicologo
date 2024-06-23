@@ -18,14 +18,31 @@ function showMoreLess() {
 
     if (!texto.hasClass("expandido")) {
         texto.append(adicionar); // Adiciona o texto oculto
-        texto.find("div").slideDown(500); // Animação slideDown
+        texto.find("div").slideDown(500, function() {
+            // Chamamos o ScrollTrigger.refresh() após a animação
+            ScrollTrigger.refresh();
+        }); // Animação slideDown
         texto.addClass("expandido");
         botao.text("Menos");
     } else {
         texto.find("div").slideUp(500, function() { // Animação slideUp com callback
             $(this).remove(); // Remove o texto adicional após a animação
+            // Chamamos o ScrollTrigger.refresh() após a animação
+            ScrollTrigger.refresh();
         });
         texto.removeClass("expandido");
         botao.text("Mais");
     }
 }
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("#nav-menu");
+
+    menuToggle.addEventListener("click", function() {
+        navMenu.classList.toggle("active");
+    });
+});

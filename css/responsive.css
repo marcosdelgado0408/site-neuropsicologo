@@ -1,0 +1,187 @@
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Adicionado para evitar o espaço extra à direita */
+    }
+
+    header {
+        align-items: center;
+    }
+
+    .logo-header-image {
+        width: 11%;
+    }
+
+
+
+    /* Estilo padrão para o botão de alternância do menu */
+    .menu-toggle {
+        display: block; /* Oculto por padrão */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Estilo padrão para o menu de navegação */
+    #nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinha os itens do menu à direita */
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do seu header */
+        right: 0; /* Posiciona o menu à direita */
+        width: 200px; /* Ajuste conforme necessário */
+        background-color: #2C5C3E; /* Cor de fundo do menu */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        z-index: 1000; /* Certifique-se de que o menu fica sobre outros elementos */
+    }
+    
+    .menu-toggle {
+        display: block; /* Exibir botão de alternância */
+    }
+
+    #nav-menu.active {
+        opacity: 1;
+        max-height: 500px; /* Ajuste conforme necessário */
+    }
+
+    #nav-menu li{
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+
+    #titulo-servicos, #titulo-contato, #titulo-sobre-mim, #titulo-localizacao{
+        margin-top: 20%;
+        margin-bottom: 10%
+    }
+
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        width: 90%;
+        text-align: center;
+    }
+
+    .profile-picture {
+       display: none;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro h2 {
+        font-size: 18px;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .buttons button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .btn-contato {
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+
+    .container-servico {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+
+    .servico {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .icone-atendimento,
+    .icone-avaliacao {
+        width: 100px;
+        height: 100px;
+    }
+
+    .conteiner-contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        margin-left: 5%;
+    }
+
+    .form {
+        margin-top: 15%;
+        margin-left: 0;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+
+    .sobre-mim-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-mim-container img {
+        width: 40%;
+        height: auto;
+    }
+
+    .sobre-mim-container ul {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .sobre-mim-container ul li {
+        width: 90%;
+    }
+
+
+
+
+    .container-localizacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa {
+        margin-top: 10%;
+
+        margin-left: 0;
+        margin-right: 0;
+        
+    
+
+        width: 52%;
+        height: 100%;
+    }
+
+    .mapa iframe {
+    
+        width: 100%;
+        height: 300px;
+    }
+
+    .info-loc h1 {
+        font-size: 24px;
+    }
+}
