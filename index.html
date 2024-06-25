@@ -25,6 +25,7 @@
     <script src="js/home.js"></script>
     <script src="js/effects.js"></script>
     <script src="js/instagram.js" ></script>
+    <script src="js/backend_connection.js"></script>
 
 </head>
 
@@ -135,23 +136,31 @@
     
     
             <div class="form fade-right">
-    
+
                 <div class="whatsapp-logo">
-                    <i class="mdi mdi-whatsapp"></i>
-                    <p>Me mande uma mensagem no Whatsapp</p>
+                    <!-- <i class="mdi mdi-whatsapp"></i> -->
+                    <p>Me mande uma mensagem</p>
                 </div>
-    
+
+
                 <div class="form-container">
-                    <input type="text" placeholder="Nome" class="input-field">
-                    <textarea placeholder="Mensagem" class="textarea-field"></textarea>
-                    <button class="submit-button">Enviar</button>
+                    <form id="emailForm">
+                        <input type="text" placeholder="Nome" class="input-field" name="name" required>
+                        <input type="email" placeholder="Email" class="input-field" name="email" required>
+                        <textarea placeholder="Mensagem" class="textarea-field" name="message" required></textarea>
+                        <button type="submit" class="submit-button">Enviar</button>
+                    </form>
+
+                    <div class="spinner" id="loadingSpinner"></div>
+
                 </div>
-    
-    
+
+
                 <div class="email">
                     <i class="mdi mdi-email"></i> <!-- Ícone de email com tamanho de 24px -->
                     <p>Mat.araujo.94@gmail.com</p>
                 </div>
+
             </div>
 
 
